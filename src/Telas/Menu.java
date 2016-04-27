@@ -37,19 +37,19 @@ public class Menu extends javax.swing.JFrame {
         jMenuItem4 = new javax.swing.JMenuItem();
         jPanel1 = new javax.swing.JPanel();
         jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
-        jMenu3 = new javax.swing.JMenu();
-        jMenuItem2 = new javax.swing.JMenuItem();
-        jMenuItem1 = new javax.swing.JMenuItem();
-        jMenu2 = new javax.swing.JMenu();
-        jMenuItem3 = new javax.swing.JMenuItem();
-        jMenuItem9 = new javax.swing.JMenuItem();
-        jMenu4 = new javax.swing.JMenu();
+        Jmn = new javax.swing.JMenu();
+        JmniLogoff = new javax.swing.JMenuItem();
+        JmnSac = new javax.swing.JMenu();
+        JmniConsultaCliente = new javax.swing.JMenuItem();
+        JmniCadastroCliente = new javax.swing.JMenuItem();
+        jmnUsuario = new javax.swing.JMenu();
+        JmniCriarUsuario = new javax.swing.JMenuItem();
+        JmniDeletarUsuario = new javax.swing.JMenuItem();
+        JmniConsultaUsuario = new javax.swing.JMenuItem();
+        JmnOpcoes = new javax.swing.JMenu();
         jMenuItem5 = new javax.swing.JMenuItem();
-        jMenuItem6 = new javax.swing.JMenuItem();
-        jMenuItem8 = new javax.swing.JMenuItem();
-        jMenu5 = new javax.swing.JMenu();
-        jMenuItem7 = new javax.swing.JMenuItem();
+        JmniRanking = new javax.swing.JMenuItem();
+        JmniRelatorio = new javax.swing.JMenuItem();
 
         jMenuItem4.setText("jMenuItem4");
 
@@ -76,56 +76,71 @@ public class Menu extends javax.swing.JFrame {
             }
         });
 
-        jMenu1.setText("Arquivos");
+        Jmn.setText("Arquivos");
 
-        jMenu3.setBackground(java.awt.Color.white);
-        jMenu3.setBorder(null);
-        jMenu3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Telas/Imagens/sign.png"))); // NOI18N
-        jMenu3.setText("Novo");
-
-        jMenuItem2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Telas/Imagens/Add user.png"))); // NOI18N
-        jMenuItem2.setText("Usuário");
-        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+        JmniLogoff.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Telas/Imagens/icon pequeno.png"))); // NOI18N
+        JmniLogoff.setText("Logoff");
+        JmniLogoff.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem2ActionPerformed(evt);
+                JmniLogoffActionPerformed(evt);
             }
         });
-        jMenu3.add(jMenuItem2);
+        Jmn.add(JmniLogoff);
 
-        jMenu1.add(jMenu3);
+        jMenuBar1.add(Jmn);
 
-        jMenuItem1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Telas/Imagens/icon pequeno.png"))); // NOI18N
-        jMenuItem1.setText("Logoff");
-        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+        JmnSac.setText("SAC");
+
+        JmniConsultaCliente.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_S, java.awt.event.InputEvent.SHIFT_MASK | java.awt.event.InputEvent.CTRL_MASK));
+        JmniConsultaCliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Telas/Imagens/Sac.png"))); // NOI18N
+        JmniConsultaCliente.setText("Consulta Cliente");
+        JmnSac.add(JmniConsultaCliente);
+
+        JmniCadastroCliente.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_N, java.awt.event.InputEvent.SHIFT_MASK | java.awt.event.InputEvent.CTRL_MASK));
+        JmniCadastroCliente.setText("Cadastro de Cliente");
+        JmniCadastroCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem1ActionPerformed(evt);
+                JmniCadastroClienteActionPerformed(evt);
             }
         });
-        jMenu1.add(jMenuItem1);
+        JmnSac.add(JmniCadastroCliente);
 
-        jMenuBar1.add(jMenu1);
+        jMenuBar1.add(JmnSac);
 
-        jMenu2.setText("Editar");
+        jmnUsuario.setText("Usuário");
 
-        jMenuItem3.setBackground(java.awt.Color.white);
-        jMenuItem3.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        jMenuItem3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Telas/Imagens/people.png"))); // NOI18N
-        jMenuItem3.setText("Usuário");
-        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+        JmniCriarUsuario.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_C, java.awt.event.InputEvent.SHIFT_MASK | java.awt.event.InputEvent.CTRL_MASK));
+        JmniCriarUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Telas/Imagens/Add user.png"))); // NOI18N
+        JmniCriarUsuario.setText("Criar Usuário");
+        JmniCriarUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem3ActionPerformed(evt);
+                JmniCriarUsuarioActionPerformed(evt);
             }
         });
-        jMenu2.add(jMenuItem3);
+        jmnUsuario.add(JmniCriarUsuario);
 
-        jMenuItem9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Telas/Imagens/delete User.png"))); // NOI18N
-        jMenuItem9.setText("Deletar Usuário");
-        jMenu2.add(jMenuItem9);
+        JmniDeletarUsuario.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_D, java.awt.event.InputEvent.SHIFT_MASK | java.awt.event.InputEvent.CTRL_MASK));
+        JmniDeletarUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Telas/Imagens/delete User.png"))); // NOI18N
+        JmniDeletarUsuario.setText("Deletar Usuário");
+        jmnUsuario.add(JmniDeletarUsuario);
 
-        jMenuBar1.add(jMenu2);
+        JmniConsultaUsuario.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_U, java.awt.event.InputEvent.SHIFT_MASK | java.awt.event.InputEvent.CTRL_MASK));
+        JmniConsultaUsuario.setBackground(java.awt.Color.white);
+        JmniConsultaUsuario.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        JmniConsultaUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Telas/Imagens/people.png"))); // NOI18N
+        JmniConsultaUsuario.setText("Consulta Usuário");
+        JmniConsultaUsuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JmniConsultaUsuarioActionPerformed(evt);
+            }
+        });
+        jmnUsuario.add(JmniConsultaUsuario);
 
-        jMenu4.setText("Opções");
+        jMenuBar1.add(jmnUsuario);
 
+        JmnOpcoes.setText("Opções");
+
+        jMenuItem5.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_G, java.awt.event.InputEvent.SHIFT_MASK | java.awt.event.InputEvent.CTRL_MASK));
         jMenuItem5.setBackground(java.awt.Color.white);
         jMenuItem5.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jMenuItem5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Telas/Imagens/arrow.png"))); // NOI18N
@@ -135,37 +150,32 @@ public class Menu extends javax.swing.JFrame {
                 jMenuItem5ActionPerformed(evt);
             }
         });
-        jMenu4.add(jMenuItem5);
+        JmnOpcoes.add(jMenuItem5);
 
-        jMenuItem6.setBackground(java.awt.Color.white);
-        jMenuItem6.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        jMenuItem6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Telas/Imagens/ranking.png"))); // NOI18N
-        jMenuItem6.setText("Ranking");
-        jMenuItem6.addActionListener(new java.awt.event.ActionListener() {
+        JmniRanking.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_R, java.awt.event.InputEvent.SHIFT_MASK | java.awt.event.InputEvent.CTRL_MASK));
+        JmniRanking.setBackground(java.awt.Color.white);
+        JmniRanking.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        JmniRanking.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Telas/Imagens/ranking.png"))); // NOI18N
+        JmniRanking.setText("Ranking");
+        JmniRanking.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem6ActionPerformed(evt);
+                JmniRankingActionPerformed(evt);
             }
         });
-        jMenu4.add(jMenuItem6);
+        JmnOpcoes.add(JmniRanking);
 
-        jMenuItem8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Telas/Imagens/Relatório.png"))); // NOI18N
-        jMenuItem8.setText("Relatório");
-        jMenuItem8.addActionListener(new java.awt.event.ActionListener() {
+        JmniRelatorio.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_T, java.awt.event.InputEvent.SHIFT_MASK | java.awt.event.InputEvent.CTRL_MASK));
+        JmniRelatorio.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        JmniRelatorio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Telas/Imagens/Relatório.png"))); // NOI18N
+        JmniRelatorio.setText("Relatório");
+        JmniRelatorio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem8ActionPerformed(evt);
+                JmniRelatorioActionPerformed(evt);
             }
         });
-        jMenu4.add(jMenuItem8);
+        JmnOpcoes.add(JmniRelatorio);
 
-        jMenuBar1.add(jMenu4);
-
-        jMenu5.setText("SAC");
-
-        jMenuItem7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Telas/Imagens/Sac.png"))); // NOI18N
-        jMenuItem7.setText("Acesso SAC");
-        jMenu5.add(jMenuItem7);
-
-        jMenuBar1.add(jMenu5);
+        jMenuBar1.add(JmnOpcoes);
 
         setJMenuBar(jMenuBar1);
 
@@ -184,34 +194,38 @@ public class Menu extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
+    private void JmniRankingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JmniRankingActionPerformed
      
-    }//GEN-LAST:event_jMenuItem6ActionPerformed
+    }//GEN-LAST:event_JmniRankingActionPerformed
 
     private void jMenuBar1FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jMenuBar1FocusGained
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuBar1FocusGained
 
-    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+    private void JmniLogoffActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JmniLogoffActionPerformed
        
-    }//GEN-LAST:event_jMenuItem1ActionPerformed
+    }//GEN-LAST:event_JmniLogoffActionPerformed
 
-    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+    private void JmniCriarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JmniCriarUsuarioActionPerformed
 
-    }//GEN-LAST:event_jMenuItem2ActionPerformed
+    }//GEN-LAST:event_JmniCriarUsuarioActionPerformed
 
-    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+    private void JmniConsultaUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JmniConsultaUsuarioActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem3ActionPerformed
+    }//GEN-LAST:event_JmniConsultaUsuarioActionPerformed
 
     private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
 
     }//GEN-LAST:event_jMenuItem5ActionPerformed
 
-    private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem8ActionPerformed
+    private void JmniRelatorioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JmniRelatorioActionPerformed
         // TODO add your handling code here:
        
-    }//GEN-LAST:event_jMenuItem8ActionPerformed
+    }//GEN-LAST:event_JmniRelatorioActionPerformed
+
+    private void JmniCadastroClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JmniCadastroClienteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_JmniCadastroClienteActionPerformed
 
     /**
      * @param args the command line arguments
@@ -249,21 +263,21 @@ public class Menu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenu jMenu3;
-    private javax.swing.JMenu jMenu4;
-    private javax.swing.JMenu jMenu5;
+    private javax.swing.JMenu Jmn;
+    private javax.swing.JMenu JmnOpcoes;
+    private javax.swing.JMenu JmnSac;
+    private javax.swing.JMenuItem JmniCadastroCliente;
+    private javax.swing.JMenuItem JmniConsultaCliente;
+    private javax.swing.JMenuItem JmniConsultaUsuario;
+    private javax.swing.JMenuItem JmniCriarUsuario;
+    private javax.swing.JMenuItem JmniDeletarUsuario;
+    private javax.swing.JMenuItem JmniLogoff;
+    private javax.swing.JMenuItem JmniRanking;
+    private javax.swing.JMenuItem JmniRelatorio;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem5;
-    private javax.swing.JMenuItem jMenuItem6;
-    private javax.swing.JMenuItem jMenuItem7;
-    private javax.swing.JMenuItem jMenuItem8;
-    private javax.swing.JMenuItem jMenuItem9;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JMenu jmnUsuario;
     // End of variables declaration//GEN-END:variables
 }
