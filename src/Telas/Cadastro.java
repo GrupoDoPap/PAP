@@ -11,9 +11,7 @@ package Telas;
  */
 public class Cadastro extends javax.swing.JFrame {
 
-    Menu m = new Menu();
-    Login l = new Login();
-
+ 
     /**
      * Creates new form Cadastro
      */
@@ -31,7 +29,7 @@ public class Cadastro extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
+        btnLogoff = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         lblNomeCompleto = new javax.swing.JLabel();
         txtNomeCompleto = new javax.swing.JTextField();
@@ -71,12 +69,12 @@ public class Cadastro extends javax.swing.JFrame {
         jPanel1.setBackground(java.awt.Color.white);
         jPanel1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
-        jButton1.setBackground(java.awt.Color.white);
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Telas/Imagens/icon.png"))); // NOI18N
-        jButton1.setText("Logoff");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnLogoff.setBackground(java.awt.Color.white);
+        btnLogoff.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Telas/Imagens/icon.png"))); // NOI18N
+        btnLogoff.setText("Logoff");
+        btnLogoff.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnLogoffActionPerformed(evt);
             }
         });
 
@@ -329,7 +327,7 @@ public class Cadastro extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnLogoff, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                                 .addComponent(jButton2)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -340,7 +338,7 @@ public class Cadastro extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnLogoff, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
@@ -368,16 +366,13 @@ public class Cadastro extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        m.setVisible(true);
-        dispose();
+      
     }//GEN-LAST:event_jButton3ActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        l.setVisible(true);
-        dispose();
-
+    private void btnLogoffActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogoffActionPerformed
+     
 // TODO add your hndling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btnLogoffActionPerformed
 
     private void txtLogradouroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtLogradouroActionPerformed
         // TODO add your handling code here:
@@ -420,7 +415,7 @@ public class Cadastro extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JList<String> ListEstado;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton btnLogoff;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel13;

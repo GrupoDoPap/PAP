@@ -1,4 +1,4 @@
-package ClasseJava;
+package RegradeNegocio;
 
 /**
  * @version 1.0
@@ -20,5 +20,6 @@ public class Gerar_Graficos {
 	public void Gerar_Grafico(){
 
 	}
+        
 
 }

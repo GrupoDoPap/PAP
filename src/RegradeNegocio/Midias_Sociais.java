@@ -1,4 +1,4 @@
-package ClasseJava;
+package RegradeNegocio;
 
 /**
  * @version 1.0
