@@ -1,136 +1,142 @@
 package RegradeNegocio;
 
-
 /**
  * @version 1.0
  * @created 11-abr-2016 22:12:13
  */
 public class Pessoa {
 
-	private String Bairro;
-	private String Celular;
-	private String Cep;
-	private String Cidade;
-	private String CPF;
-	private String Data_Nascimento;
-	private String Email;
-	private String Fixo;
-	private String Nome;
-	private String Ranking_compra;
-	private String RG;
-	private String Rua;
-	private String Uf;
+    private String Bairro;
+    private String Celular;
+    private String Cep;
+    private String Cidade;
+    private String CPFCNPJ;
+    private String Data_Nascimento;
+    private String Email;
+    private String Fixo;
+    private String Nome;
+    private String Ranking_compra;
+    private String RG;
+    private String Rua;
+    private String Uf;
+    private String Complemento;
 
-	public Pessoa(){
+    public String getBairro() {
+        return Bairro;
+    }
 
-	}
+    public void setBairro(String Bairro) {
+        this.Bairro = Bairro;
+    }
 
-	public void finalize() throws Throwable {
+    public String getCelular() {
+        return Celular;
+    }
 
-	}
+    public void setCelular(String Celular) {
+        this.Celular = Celular;
+    }
 
-	public String getBairro(){
-		return "";
-	}
+    public String getCep() {
+        return Cep;
+    }
 
-	public String getCelular(){
-		return "";
-	}
+    public void setCep(String Cep) {
+        this.Cep = Cep;
+    }
 
-	public String getCep(){
-		return "";
-	}
+    public String getCidade() {
+        return Cidade;
+    }
 
-	public String getCidade(){
-		return "";
-	}
+    public void setCidade(String Cidade) {
+        this.Cidade = Cidade;
+    }
 
-	public String getCpf(){
-		return "";
-	}
+    public String getCPFCNPJ() {
+        return CPFCNPJ;
+    }
 
-	public String getData_Nascimento(){
-		return "";
-	}
+    public void setCPFCNPJ(String CPF) {
+        this.CPFCNPJ = CPF;
+    }
 
-	public String getEmail(){
-		return "";
-	}
+    public String getData_Nascimento() {
+        return Data_Nascimento;
+    }
 
-	public String getFixo(){
-		return "";
-	}
+    public void setData_Nascimento(String Data_Nascimento) {
+        this.Data_Nascimento = Data_Nascimento;
+    }
 
-	public String getNome(){
-		return "";
-	}
+    public String getEmail() {
+        return Email;
+    }
 
-	public String getRanking_compra(){
-		return "";
-	}
+    public void setEmail(String Email) {
+        this.Email = Email;
+    }
 
-	public String getRG(){
-		return "";
-	}
+    public String getFixo() {
+        return Fixo;
+    }
 
-	public String getRua(){
-		return "";
-	}
+    public void setFixo(String Fixo) {
+        this.Fixo = Fixo;
+    }
 
-	public String getUf(){
-		return "";
-	}
+    public String getNome() {
+        return Nome;
+    }
 
-	public String setBairro(){
-		return "";
-	}
+    public void setNome(String Nome) {
+        this.Nome = Nome;
+    }
 
-	public String setCelular(){
-		return "";
-	}
+    public String getRanking_compra() {
+        return Ranking_compra;
+    }
 
-	public String setCep(){
-		return "";
-	}
+    public void setRanking_compra(String Ranking_compra) {
+        this.Ranking_compra = Ranking_compra;
+    }
 
-	public String setCidade(){
-		return "";
-	}
+    public String getRG() {
+        return RG;
+    }
 
-	public String setCpf(){
-		return "";
-	}
+    public void setRG(String RG) {
+        this.RG = RG;
+    }
 
-	public String setData_Nascimento(){
-		return "";
-	}
+    public String getRua() {
+        return Rua;
+    }
 
-	public String setEmail(){
-		return "";
-	}
+    public void setRua(String Rua) {
+        this.Rua = Rua;
+    }
 
-	public String setFixo(){
-		return "";
-	}
+    public String getUf() {
+        return Uf;
+    }
 
-	public String setNome(){
-		return "";
-	}
+    public void setUf(String Uf) {
+        this.Uf = Uf;
+    }
 
-	public String setRanking_compra(){
-		return "";
-	}
+    public String getComplemento() {
+        return Complemento;
+    }
 
-	public String setRG(){
-		return "";
-	}
+    public void setComplemento(String Complemento) {
+        this.Complemento = Complemento;
+    }
 
-	public String setRua(){
-		return "";
-	}
+    
 
-	public String setUf(){
-		return "";
-	}
+    public Pessoa() {
+
+    }
 
 }

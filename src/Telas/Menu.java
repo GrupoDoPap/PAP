@@ -11,12 +11,6 @@ package Telas;
  */
 public class Menu extends javax.swing.JFrame {
 
-    Cadastro c = new Cadastro();
-    Login l = new Login();
-    Gráficos g = new Gráficos();
-    Ranking r = new Ranking();
-    Relatorio rela = new Relatorio();
-    Sac s = new Sac();
 
     /**
      * Creates new form Menu
@@ -212,8 +206,7 @@ public class Menu extends javax.swing.JFrame {
     }//GEN-LAST:event_JmniLogoffActionPerformed
 
     private void JmniCriarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JmniCriarUsuarioActionPerformed
-        teste t= new teste();
-        t.setVisible(true);
+       
         
     }//GEN-LAST:event_JmniCriarUsuarioActionPerformed
 

@@ -1,94 +1,69 @@
 package RegradeNegocio;
 
-
 /**
  * @version 1.0
  * @created 11-abr-2016 22:11:40
  */
 public class Cliente extends Pessoa {
 
-	private int Cliente;
-	private String Data_cadastro;
-	private String Data_compra;
-	private int Id_manifesto;
-	private int Id_produto;
-	private String Manifesto;
-	private String Produto_comprado;
+    private String Data_cadastro;
+    private String Data_compra;
+    private int Id_manifesto;
+    private int Id_produto;
+    private String Manifesto;
+    private String Produto_comprado;
 
-	public Cliente(){
+    public String getData_cadastro() {
+        return Data_cadastro;
+    }
 
-	}
+    public void setData_cadastro(String Data_cadastro) {
+        this.Data_cadastro = Data_cadastro;
+    }
 
-	public void finalize() throws Throwable {
-		
-	}
+    public String getData_compra() {
+        return Data_compra;
+    }
 
-	/**
-	 * 
-	 * @param Bairro
-	 * @param Celular
-	 * @param Cep
-	 * @param Cidade
-	 * @param CPF
-	 * @param Data_Nascimento
-	 * @param Email
-	 * @param Fixo
-	 * @param Nome
-	 * @param Ranking_compra
-	 * @param RG
-	 * @param Rua
-	 * @param Uf
-	 */
-	public int Cliente(String Bairro, String Celular, String Cep, String Cidade, String CPF, String Data_Nascimento, String Email, String Fixo, String Nome, String Ranking_compra, String RG, String Rua, String Uf){
-		return 0;
-	}
+    public void setData_compra(String Data_compra) {
+        this.Data_compra = Data_compra;
+    }
 
-	public String getData_cadastro(){
-		return "";
-	}
+    public int getId_manifesto() {
+        return Id_manifesto;
+    }
 
-	public String getData_compra(){
-		return "";
-	}
+    public void setId_manifesto(int Id_manifesto) {
+        this.Id_manifesto = Id_manifesto;
+    }
 
-	public int getId_manifesto(){
-		return 0;
-	}
+    public int getId_produto() {
+        return Id_produto;
+    }
 
-	public int getId_produto(){
-		return 0;
-	}
+    public void setId_produto(int Id_produto) {
+        this.Id_produto = Id_produto;
+    }
 
-	public String getManifesto(){
-		return "";
-	}
+    public String getManifesto() {
+        return Manifesto;
+    }
 
-	public String getProduto_comprado(){
-		return "";
-	}
+    public void setManifesto(String Manifesto) {
+        this.Manifesto = Manifesto;
+    }
 
-	public String setData_cadastro(){
-		return "";
-	}
+    public String getProduto_comprado() {
+        return Produto_comprado;
+    }
 
-	public String setData_compra(){
-		return "";
-	}
+    public void setProduto_comprado(String Produto_comprado) {
+        this.Produto_comprado = Produto_comprado;
+    }
 
-	public int setId_manifesto(){
-		return 0;
-	}
+    public Cliente() {
 
-	public int setId_produto(){
-		return 0;
-	}
+    }
 
-	public String setManifesto(){
-		return "";
-	}
-
-	public String setProduto_comprado(){
-		return "";
-	}
-
+   
 }
