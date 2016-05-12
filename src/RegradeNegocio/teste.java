@@ -14,6 +14,7 @@ public class teste {
     public static void main(String[] args) {
         Atendimento a = new Atendimento();
         Produtos p = new Produtos();
+        Login l = new Login();
         a.cadastroCliente("Daniel", "405.990.188.10", "sanches_dado@hotmail.com", "968738481",
                 "4437-2412", "483510336", "São Bernardo", "Rua Tiradentes", "sta Terezinha",
                 "bloco 11 apto 155", "09781220", "SP");
@@ -28,5 +29,8 @@ public class teste {
         System.out.println(p.getQtdEstoque());
         System.out.println(p.getPrecoProduto());
 
+        l.login("12345", "12345");
+        l.login("1234", "1234");
+        
     }
 }
