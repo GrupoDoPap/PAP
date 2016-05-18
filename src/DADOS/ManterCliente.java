@@ -5,10 +5,14 @@ import java.sql.PreparedStatement;
 
 public class ManterCliente {
 
-    public void CadastrarCliente(int idCliente, String nomecliente, String emailCliente, String datacadastro, String CPFcliente, int numeroCliente, String cidadecliente, String complementocliente, int cepcliente, String logradourocliente, String bairrocliente) {
-        System.out.println("Entrou no metodo");
+    public void CadastrarCliente(int idCliente, String nomecliente, String emailCliente,
+            String CPFcliente, int numeroCliente, String cidadecliente, String complementocliente, String cepcliente,
+            String logradourocliente, String bairrocliente) {
+
         Connection conn = null;
-        String Cadastro = "insert into clientecrm(IDCLIENTE,NOMECLIENTE,EMAILCLIENTE,DATACADASTRO,CPFCLIENTE,NUMEROCLIENTE,CIDADECLIENTE,COMPLEMENTOCLIENTE,CEPCLIENTE,LOGRADOUROCLIENTE,BAIRROCLIENTE) VALUES (?,?,?,?,?,?,?,?,?,?,?)";
+        String Cadastro = "insert into clientecrm(IDCLIENTE,NOMECLIENTE,EMAILCLIENTE,"
+                + "CPFCLIENTE,NUMEROCLIENTE,CIDADECLIENTE,COMPLEMENTOCLIENTE,"
+                + "CEPCLIENTE,LOGRADOUROCLIENTE,BAIRROCLIENTE) VALUES (?,?,?,?,?,?,?,?,?,?,?)";
         try {
             Conectar C = new Conectar();
             try {
@@ -21,12 +25,11 @@ public class ManterCliente {
             stm.setInt(1, idCliente);
             stm.setString(2, nomecliente);
             stm.setString(3, emailCliente);
-            stm.setString(4, datacadastro);
             stm.setString(5, CPFcliente);
             stm.setInt(6, numeroCliente);
             stm.setString(7, cidadecliente);
             stm.setString(8, complementocliente);
-            stm.setInt(9, cepcliente);
+            stm.setString(9, cepcliente);
             stm.setString(10, logradourocliente);
             stm.setString(11, bairrocliente);
 
@@ -49,7 +52,7 @@ public class ManterCliente {
             } catch (Exception e) {
                 System.out.println(e);
             }
-            
+
             PreparedStatement sd = conn.prepareStatement(delete);
             sd.setInt(1, idCliente);
             sd.execute();
@@ -57,9 +60,9 @@ public class ManterCliente {
             System.out.println("ERRO DE CONEXÃO: " + e);
         }
     }
-    
+
     public static void main(String[] args) {
-        ManterCliente m= new ManterCliente();
+        ManterCliente m = new ManterCliente();
         m.DeletarCliente(122334);
     }
 }

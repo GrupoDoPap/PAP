@@ -5,16 +5,22 @@
  */
 package RegradeNegocio;
 
+import java.text.DateFormat;
 import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import oracle.net.aso.d;
 
 /**
  *
  * @author Sanches
  */
-public class teste {
+public class ArmazanarData {
 
-    public static void main(String[] args) throws ParseException {
-        ArmazanarData a = new ArmazanarData();
-        System.out.println(a.getDataAtual());
+    public String  getDataAtual() {
+        Date d = new Date();
+        d.getDate();
+        return d.toString();
     }
 }

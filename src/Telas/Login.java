@@ -5,6 +5,8 @@
  */
 package Telas;
 
+import RegradeNegocio.MetodoLogin;
+
 /**
  *
  * @author jfnop
@@ -31,10 +33,10 @@ public class Login extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        txtLogin = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        jPasswordField1 = new javax.swing.JPasswordField();
-        jButton1 = new javax.swing.JButton();
+        txtSenha = new javax.swing.JPasswordField();
+        btnAcessar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Bem vindo");
@@ -60,30 +62,30 @@ public class Login extends javax.swing.JFrame {
         jPanel1.add(jLabel1);
         jLabel1.setBounds(20, 250, 45, 34);
 
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        txtLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                txtLoginActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField1);
-        jTextField1.setBounds(80, 260, 410, 20);
+        jPanel1.add(txtLogin);
+        txtLogin.setBounds(80, 260, 410, 20);
 
         jLabel3.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel3.setText("Senha:");
         jPanel1.add(jLabel3);
         jLabel3.setBounds(20, 300, 45, 25);
-        jPanel1.add(jPasswordField1);
-        jPasswordField1.setBounds(80, 300, 410, 20);
+        jPanel1.add(txtSenha);
+        txtSenha.setBounds(80, 300, 410, 20);
 
-        jButton1.setBackground(java.awt.Color.white);
-        jButton1.setText("Acessar");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnAcessar.setBackground(java.awt.Color.white);
+        btnAcessar.setText("Acessar");
+        btnAcessar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnAcessarActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1);
-        jButton1.setBounds(500, 270, 130, 23);
+        jPanel1.add(btnAcessar);
+        btnAcessar.setBounds(500, 270, 130, 23);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -100,13 +102,15 @@ public class Login extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void txtLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtLoginActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_txtLoginActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void btnAcessarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAcessarActionPerformed
+        MetodoLogin lo = new MetodoLogin();
+        lo.login(txtLogin.getText(), txtSenha.getText());
+        
+    }//GEN-LAST:event_btnAcessarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -144,12 +148,12 @@ public class Login extends javax.swing.JFrame {
     }
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton btnAcessar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPasswordField jPasswordField1;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField txtLogin;
+    private javax.swing.JPasswordField txtSenha;
     // End of variables declaration//GEN-END:variables
 }

@@ -20,26 +20,7 @@ public class Funcionario extends Pessoa {
 		super.finalize();
 	}
 
-	/**
-	 * 
-	 * @param Bairro
-	 * @param Celular
-	 * @param Cep
-	 * @param Cidade
-	 * @param CPF
-	 * @param Data_Nascimento
-	 * @param Email
-	 * @param Fixo
-	 * @param Nome
-	 * @param Ranking_compra
-	 * @param RG
-	 * @param Rua
-	 * @param Uf
-	 * @param Cargo
-	 * @param Dara_Admissao
-	 * @param Id_funcionario
-	 * @param Setor
-	 */
+	
 	public void Funcionario(String Bairro, String Celular, String Cep, String 
                 Cidade, String CPF, String Data_Nascimento, String Email, String 
                         Fixo, String Nome, String Ranking_compra, String RG, String Rua, 
@@ -47,36 +28,38 @@ public class Funcionario extends Pessoa {
 
 	}
 
-	public String getCargo(){
-		return "";
-	}
+    public String getCargo() {
+        return Cargo;
+    }
 
-	public String getData_Admissao(){
-		return "";
-	}
+    public void setCargo(String Cargo) {
+        this.Cargo = Cargo;
+    }
 
-	public int getId_funcionario(){
-		return 0;
-	}
+    public String getData_Admissao() {
+        return Data_Admissao;
+    }
 
-	public String getSetor(){
-		return "";
-	}
+    public void setData_Admissao(String Data_Admissao) {
+        this.Data_Admissao = Data_Admissao;
+    }
 
-	public String setCargo(){
-		return "";
-	}
+    public int getId_funcionario() {
+        return Id_funcionario;
+    }
 
-	public String setData_Admissao(){
-		return "";
-	}
+    public void setId_funcionario(int Id_funcionario) {
+        this.Id_funcionario = Id_funcionario;
+    }
 
-	public int setId_funcionario(){
-		return 0;
-	}
+    public String getSetor() {
+        return Setor;
+    }
 
-	public String setSetor(){
-		return "";
-	}
+    public void setSetor(String Setor) {
+        this.Setor = Setor;
+    }
+
+	
 
 }

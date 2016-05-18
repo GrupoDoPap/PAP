@@ -5,6 +5,8 @@
  */
 package Telas;
 
+import DADOS.ManterCliente;
+
 /**
  *
  * @author jfnop
@@ -57,10 +59,10 @@ public class Cadastro extends javax.swing.JFrame {
         lblComplemento = new javax.swing.JLabel();
         txtComplemento = new javax.swing.JTextField();
         jLabel13 = new javax.swing.JLabel();
-        lblLogradouro = new javax.swing.JLabel();
-        txtLogradouro = new javax.swing.JTextField();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        lblBairro = new javax.swing.JLabel();
+        txtBairro = new javax.swing.JTextField();
+        btnCadastrar = new javax.swing.JButton();
+        btnVoltar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Cadastro");
@@ -214,12 +216,12 @@ public class Cadastro extends javax.swing.JFrame {
         jLabel13.setForeground(new java.awt.Color(204, 204, 204));
         jLabel13.setText("Todos os campos são obrigatórios");
 
-        lblLogradouro.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        lblLogradouro.setText("Logradouro:");
+        lblBairro.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        lblBairro.setText("Bairro:");
 
-        txtLogradouro.addActionListener(new java.awt.event.ActionListener() {
+        txtBairro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtLogradouroActionPerformed(evt);
+                txtBairroActionPerformed(evt);
             }
         });
 
@@ -255,9 +257,9 @@ public class Cadastro extends javax.swing.JFrame {
                             .addGroup(jPanel3Layout.createSequentialGroup()
                                 .addComponent(txtComplemento, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(lblLogradouro)
+                                .addComponent(lblBairro)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(txtLogradouro, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txtBairro, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, Short.MAX_VALUE))))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
@@ -284,8 +286,8 @@ public class Cadastro extends javax.swing.JFrame {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblComplemento)
                     .addComponent(txtComplemento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblLogradouro)
-                    .addComponent(txtLogradouro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lblBairro)
+                    .addComponent(txtBairro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(21, 21, 21)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
@@ -300,18 +302,23 @@ public class Cadastro extends javax.swing.JFrame {
                 .addContainerGap(27, Short.MAX_VALUE))
         );
 
-        jButton2.setBackground(java.awt.Color.white);
-        jButton2.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Telas/Imagens/Ok.png"))); // NOI18N
-        jButton2.setText("Cadastrar");
-
-        jButton3.setBackground(java.awt.Color.white);
-        jButton3.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Telas/Imagens/Ok.png"))); // NOI18N
-        jButton3.setText("Voltar");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        btnCadastrar.setBackground(java.awt.Color.white);
+        btnCadastrar.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
+        btnCadastrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Telas/Imagens/Ok.png"))); // NOI18N
+        btnCadastrar.setText("Cadastrar");
+        btnCadastrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                btnCadastrarActionPerformed(evt);
+            }
+        });
+
+        btnVoltar.setBackground(java.awt.Color.white);
+        btnVoltar.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
+        btnVoltar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Telas/Imagens/Ok.png"))); // NOI18N
+        btnVoltar.setText("Voltar");
+        btnVoltar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVoltarActionPerformed(evt);
             }
         });
 
@@ -329,9 +336,9 @@ public class Cadastro extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(btnLogoff, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addComponent(jButton2)
+                                .addComponent(btnCadastrar)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton3)))))
+                                .addComponent(btnVoltar)))))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -345,8 +352,8 @@ public class Cadastro extends javax.swing.JFrame {
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton2)
-                    .addComponent(jButton3))
+                    .addComponent(btnCadastrar)
+                    .addComponent(btnVoltar))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -365,18 +372,26 @@ public class Cadastro extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void btnVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarActionPerformed
       
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_btnVoltarActionPerformed
 
     private void btnLogoffActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogoffActionPerformed
      
 // TODO add your hndling code here:
     }//GEN-LAST:event_btnLogoffActionPerformed
 
-    private void txtLogradouroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtLogradouroActionPerformed
+    private void txtBairroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtBairroActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtLogradouroActionPerformed
+    }//GEN-LAST:event_txtBairroActionPerformed
+
+    private void btnCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastrarActionPerformed
+    ManterCliente man = new ManterCliente();
+
+    man.CadastrarCliente(1, txtNomeCompleto.getText(), txtEmail.getText(),  txtCpfCnepj.getText(), 
+            Integer.parseInt(txtnumero.getText()), txtCidade.getText(), txtComplemento.getText(), txtCep.getText(), 
+            txtEndereco.getText(), txtBairro.getText());
+    }//GEN-LAST:event_btnCadastrarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -415,15 +430,16 @@ public class Cadastro extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JList<String> ListEstado;
+    private javax.swing.JButton btnCadastrar;
     private javax.swing.JButton btnLogoff;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JButton btnVoltar;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel lblBairro;
     private javax.swing.JLabel lblCelular;
     private javax.swing.JLabel lblCep;
     private javax.swing.JLabel lblCidade;
@@ -431,11 +447,11 @@ public class Cadastro extends javax.swing.JFrame {
     private javax.swing.JLabel lblEmail;
     private javax.swing.JLabel lblEndereco;
     private javax.swing.JLabel lblEstado;
-    private javax.swing.JLabel lblLogradouro;
     private javax.swing.JLabel lblNomeCompleto;
     private javax.swing.JLabel lblTelefone;
     private javax.swing.JLabel lblnumero;
     private javax.swing.JLabel lglCpfCnpj;
+    private javax.swing.JTextField txtBairro;
     private javax.swing.JFormattedTextField txtCelular;
     private javax.swing.JFormattedTextField txtCep;
     private javax.swing.JTextField txtCidade;
@@ -443,7 +459,6 @@ public class Cadastro extends javax.swing.JFrame {
     private javax.swing.JFormattedTextField txtCpfCnepj;
     private javax.swing.JTextField txtEmail;
     private javax.swing.JTextField txtEndereco;
-    private javax.swing.JTextField txtLogradouro;
     private javax.swing.JTextField txtNomeCompleto;
     private javax.swing.JFormattedTextField txtTelefone;
     private javax.swing.JFormattedTextField txtnumero;

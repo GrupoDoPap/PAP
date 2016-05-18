@@ -11,7 +11,7 @@ import javax.swing.JOptionPane;
  *
  * @author Sanches
  */
-public class Login {
+public class MetodoLogin {
 
     private String idFuncionario;
     private String Senha;
@@ -19,7 +19,7 @@ public class Login {
 
     public boolean login(String idFuncionario, String Senha) {
 
-        if (!idFuncionario.equals(this.idFuncionario)) {
+        if ( ! Senha.equals(this.Senha)) {
             JOptionPane.showMessageDialog(null, "Usuario ou senha incorreto");
             validacao = false;
         } else {
