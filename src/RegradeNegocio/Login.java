@@ -15,16 +15,41 @@ public class Login {
 
     private String idFuncionario;
     private String Senha;
+    private boolean validacao;
 
-    public void login(String idFuncionario, String Senha) {
+    public boolean login(String idFuncionario, String Senha) {
 
         if (!idFuncionario.equals(this.idFuncionario)) {
-            //   JOptionPane.showMessageDialog(null, "Usuario ou senha incorreto");
-            System.out.println("Usuario ou senha Incorreto");
+            JOptionPane.showMessageDialog(null, "Usuario ou senha incorreto");
+            validacao = false;
         } else {
-            //   JOptionPane.showMessageDialog(null, "Usuario ou senha incorreto");
-            System.out.println("Login realizado com sucesso");
+            validacao = true;
         }
-
+        return validacao;
     }
+
+    public String getIdFuncionario() {
+        return idFuncionario;
+    }
+
+    public void setIdFuncionario(String idFuncionario) {
+        this.idFuncionario = idFuncionario;
+    }
+
+    public String getSenha() {
+        return Senha;
+    }
+
+    public void setSenha(String Senha) {
+        this.Senha = Senha;
+    }
+
+    public boolean isValidacao() {
+        return validacao;
+    }
+
+    public void setValidacao(boolean validacao) {
+        this.validacao = validacao;
+    }
+
 }

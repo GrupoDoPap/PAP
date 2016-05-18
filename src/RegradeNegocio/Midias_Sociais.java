@@ -6,35 +6,27 @@ package RegradeNegocio;
  */
 public class Midias_Sociais {
 
-	private String Nome_Midia;
-	private String Tipo_Manifesto;
+    private String Nome_Midia;
+    private String Tipo_Manifesto;
 
-	public Midias_Sociais(){
+    public Midias_Sociais() {
 
-	}
+    }
 
-	public void finalize() throws Throwable {
+    public String getNome_Midia() {
+        return Nome_Midia;
+    }
 
-	}
+    public void setNome_Midia(String Nome_Midia) {
+        this.Nome_Midia = Nome_Midia;
+    }
 
-	public String getNome_Midia(){
-		return "";
-	}
+    public String getTipo_Manifesto() {
+        return Tipo_Manifesto;
+    }
 
-	public String getTipo_Manifesto(){
-		return "";
-	}
-
-	public void Receber_Manifesto(){
-
-	}
-
-	public String setNome_Midia(){
-		return "";
-	}
-
-	public String setTipo_Manifesto(){
-		return "";
-	}
+    public void setTipo_Manifesto(String Tipo_Manifesto) {
+        this.Tipo_Manifesto = Tipo_Manifesto;
+    }
 
 }

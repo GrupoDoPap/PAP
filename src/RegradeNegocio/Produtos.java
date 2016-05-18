@@ -16,6 +16,19 @@ public class Produtos {
     private int idProduto;
     private String tipoDeProduto;
 
+    public void adicionarProduto(String tipoDeProduto, int idProduto, int qtdEstoque, double precoProduto) {
+
+        this.idProduto = idProduto;
+        this.tipoDeProduto = tipoDeProduto;
+        this.qtdEstoque = qtdEstoque;
+        this.precoProduto = precoProduto;
+
+    }
+
+    public void deletarProduto(String idProduto) {
+
+    }
+
     public int getIdProduto() {
         return idProduto;
     }
@@ -46,19 +59,6 @@ public class Produtos {
 
     public void setPrecoProduto(double precoProduto) {
         this.precoProduto = precoProduto;
-    }
-
-    public void adicionarProduto(String tipoDeProduto, int idProduto, int qtdEstoque, double precoProduto) {
-
-        this.idProduto = idProduto;
-        this.tipoDeProduto = tipoDeProduto;
-        this.qtdEstoque = qtdEstoque;
-        this.precoProduto = precoProduto;
-
-    }
-
-    public void deletarProduto(String idProduto) {
-
     }
 
 }

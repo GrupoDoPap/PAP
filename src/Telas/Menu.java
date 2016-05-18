@@ -7,16 +7,15 @@ package Telas;
 
 /**
  *
- * @author jfnop
+ * @author Sanches
  */
 public class Menu extends javax.swing.JFrame {
 
-
     /**
-     * Creates new form Menu
+     * Creates new form menu1
      */
     public Menu() {
-        //initComponents();
+        initComponents();
     }
 
     /**
@@ -28,7 +27,6 @@ public class Menu extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jMenuItem4 = new javax.swing.JMenuItem();
         jPanel1 = new javax.swing.JPanel();
         jMenuBar1 = new javax.swing.JMenuBar();
         Jmn = new javax.swing.JMenu();
@@ -45,15 +43,7 @@ public class Menu extends javax.swing.JFrame {
         JmniRanking = new javax.swing.JMenuItem();
         JmniRelatorio = new javax.swing.JMenuItem();
 
-        jMenuItem4.setText("jMenuItem4");
-
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Menu de opções");
-        setMaximumSize(new java.awt.Dimension(500, 500));
-        setMinimumSize(new java.awt.Dimension(500, 500));
-        setPreferredSize(new java.awt.Dimension(500, 500));
-        setResizable(false);
-        setSize(new java.awt.Dimension(500, 500));
 
         jPanel1.setBackground(java.awt.Color.white);
         jPanel1.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
@@ -62,11 +52,11 @@ public class Menu extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 427, Short.MAX_VALUE)
+            .addGap(0, 400, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 299, Short.MAX_VALUE)
+            .addGap(0, 279, Short.MAX_VALUE)
         );
 
         jMenuBar1.addFocusListener(new java.awt.event.FocusAdapter() {
@@ -186,28 +176,22 @@ public class Menu extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
-        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void JmniRankingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JmniRankingActionPerformed
-     
-    }//GEN-LAST:event_JmniRankingActionPerformed
-
-    private void jMenuBar1FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jMenuBar1FocusGained
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuBar1FocusGained
-
     private void JmniLogoffActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JmniLogoffActionPerformed
-       
+
     }//GEN-LAST:event_JmniLogoffActionPerformed
 
+    private void JmniCadastroClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JmniCadastroClienteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_JmniCadastroClienteActionPerformed
+
     private void JmniCriarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JmniCriarUsuarioActionPerformed
-       
-        
+
     }//GEN-LAST:event_JmniCriarUsuarioActionPerformed
 
     private void JmniConsultaUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JmniConsultaUsuarioActionPerformed
@@ -218,14 +202,18 @@ public class Menu extends javax.swing.JFrame {
 
     }//GEN-LAST:event_jMenuItem5ActionPerformed
 
+    private void JmniRankingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JmniRankingActionPerformed
+
+    }//GEN-LAST:event_JmniRankingActionPerformed
+
     private void JmniRelatorioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JmniRelatorioActionPerformed
         // TODO add your handling code here:
-       
+
     }//GEN-LAST:event_JmniRelatorioActionPerformed
 
-    private void JmniCadastroClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JmniCadastroClienteActionPerformed
+    private void jMenuBar1FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jMenuBar1FocusGained
         // TODO add your handling code here:
-    }//GEN-LAST:event_JmniCadastroClienteActionPerformed
+    }//GEN-LAST:event_jMenuBar1FocusGained
 
     /**
      * @param args the command line arguments
@@ -253,6 +241,7 @@ public class Menu extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(Menu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -275,7 +264,6 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JMenuItem JmniRanking;
     private javax.swing.JMenuItem JmniRelatorio;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JMenu jmnUsuario;
