@@ -16,31 +16,6 @@ public class Atendimento {
     private String comentario;
     Cliente c = new Cliente();
 
-    public void cadastroCliente(String Nome, String CPFCNPJ, String Email, String Celular,
-            String Fixo, String RG, String Cidade, String Rua, String Bairro,
-            String Complemento, String Cep, String Uf) {
-
-        c.setNome(Nome);
-        c.setCPFCNPJ(CPFCNPJ);
-        c.setEmail(Email);
-        c.setCelular(Celular);
-        c.setFixo(Fixo);
-        c.setRG(RG);
-        c.setCidade(Cidade);
-        c.setRua(Rua);
-        c.setBairro(Bairro);
-        c.setComplemento(Complemento);
-        c.setCep(Cep);
-        c.setUf(Uf);
-
-    }
-
-    public String toString() {
-        return c.getNome() + " " + c.getCPFCNPJ() + " " + c.getEmail() + " " + c.getCelular() + "\n"
-                + " " + c.getFixo() + " " + c.getRG() + " " + c.getCidade() + " " + c.getRua() + "\n"
-                + " " + c.getBairro() + " " + c.getComplemento() + " " + c.getCep();
-    }
-
     public Atendimento() {
 
     }

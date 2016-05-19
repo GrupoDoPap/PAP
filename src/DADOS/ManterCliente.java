@@ -40,10 +40,10 @@ public class ManterCliente {
         }
     }
 
-    public void DeletarCliente(int idCliente) {
+    public void DeletarCliente(int CPFCLIENTE) {
         System.out.println("Entrou no metodo");
         Connection conn = null;
-        String delete = "DELETE FROM CLIENTECRM WHERE IDCLIENTE=(?)";
+        String delete = "DELETE FROM CLIENTECRM WHERE CPFCLIENTE=(?)";
         try {
             Conectar C = new Conectar();
             try {
@@ -54,7 +54,7 @@ public class ManterCliente {
             }
 
             PreparedStatement sd = conn.prepareStatement(delete);
-            sd.setInt(1, idCliente);
+            sd.setInt(1, CPFCLIENTE);
             sd.execute();
         } catch (Exception e) {
             System.out.println("ERRO DE CONEXÃO: " + e);
