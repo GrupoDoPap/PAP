@@ -12,7 +12,7 @@ public class ManterCliente {
         Connection conn = null;
         String Cadastro = "insert into clientecrm(IDCLIENTE,NOMECLIENTE,EMAILCLIENTE,"
                 + "CPFCLIENTE,NUMEROCLIENTE,CIDADECLIENTE,COMPLEMENTOCLIENTE,"
-                + "CEPCLIENTE,LOGRADOUROCLIENTE,BAIRROCLIENTE) VALUES (?,?,?,?,?,?,?,?,?,?,?)";
+                + "CEPCLIENTE,LOGRADOUROCLIENTE,BAIRROCLIENTE) VALUES (?,?,?,?,?,?,?,?,?,?)";
         try {
             Conectar C = new Conectar();
             try {
@@ -25,13 +25,13 @@ public class ManterCliente {
             stm.setInt(1, idCliente);
             stm.setString(2, nomecliente);
             stm.setString(3, emailCliente);
-            stm.setString(5, CPFcliente);
-            stm.setInt(6, numeroCliente);
-            stm.setString(7, cidadecliente);
-            stm.setString(8, complementocliente);
-            stm.setString(9, cepcliente);
-            stm.setString(10, logradourocliente);
-            stm.setString(11, bairrocliente);
+            stm.setString(4, CPFcliente);
+            stm.setInt(5, numeroCliente);
+            stm.setString(6, cidadecliente);
+            stm.setString(7, complementocliente);
+            stm.setString(8, cepcliente);
+            stm.setString(9, logradourocliente);
+            stm.setString(10, bairrocliente);
 
             stm.execute();
 

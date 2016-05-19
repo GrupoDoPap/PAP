@@ -6,6 +6,7 @@
 package Telas;
 
 import DADOS.ManterCliente;
+import java.util.Random;
 
 /**
  *
@@ -13,7 +14,6 @@ import DADOS.ManterCliente;
  */
 public class Cadastro extends javax.swing.JFrame {
 
- 
     /**
      * Creates new form Cadastro
      */
@@ -52,8 +52,6 @@ public class Cadastro extends javax.swing.JFrame {
         lblEstado = new javax.swing.JLabel();
         txtCidade = new javax.swing.JTextField();
         lblCidade = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        ListEstado = new javax.swing.JList<>();
         lblCep = new javax.swing.JLabel();
         txtCep = new javax.swing.JFormattedTextField();
         lblComplemento = new javax.swing.JLabel();
@@ -61,6 +59,7 @@ public class Cadastro extends javax.swing.JFrame {
         jLabel13 = new javax.swing.JLabel();
         lblBairro = new javax.swing.JLabel();
         txtBairro = new javax.swing.JTextField();
+        jComboBox1 = new javax.swing.JComboBox<>();
         btnCadastrar = new javax.swing.JButton();
         btnVoltar = new javax.swing.JButton();
 
@@ -194,13 +193,6 @@ public class Cadastro extends javax.swing.JFrame {
         lblCidade.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         lblCidade.setText("Cidade:");
 
-        ListEstado.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Acre", "Alagoas ", "Amapá", "Amazonas", "Bahia", "Ceará", "Distrito Federal ", "Espírito Santo", "Goiás", "Maranhão", "Mato Grosso", "Mato Grosso do Sul", "Minas Gerais", "Pará", "Paraíba", "Paraná", "Pernambuco", "Piau", "Rio de Janeiro", "Rio Grande do Norte", "Rio Grande do Sul", "Rondônia", "Roraima", "Santa Catarina", "São Paulo", "Sergipe", "Tocantins" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
-        jScrollPane1.setViewportView(ListEstado);
-
         lblCep.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         lblCep.setText("CEP:");
 
@@ -225,6 +217,8 @@ public class Cadastro extends javax.swing.JFrame {
             }
         });
 
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "SP", " " }));
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
@@ -238,7 +232,7 @@ public class Cadastro extends javax.swing.JFrame {
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGap(71, 71, 71)
                         .addComponent(lblCep)
-                        .addGap(18, 18, 18)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(txtCep, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel3Layout.createSequentialGroup()
@@ -260,13 +254,13 @@ public class Cadastro extends javax.swing.JFrame {
                                 .addComponent(lblBairro)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(txtBairro, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, Short.MAX_VALUE))))
+                                .addGap(0, 58, Short.MAX_VALUE))))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(lblEstado)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(40, 40, 40)
                         .addComponent(lblCidade)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(txtCidade, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -289,17 +283,17 @@ public class Cadastro extends javax.swing.JFrame {
                     .addComponent(lblBairro)
                     .addComponent(txtBairro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(21, 21, 21)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(txtCidade, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(lblCidade))
+                        .addComponent(lblCidade)
+                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(lblEstado, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lblCep)
                     .addComponent(txtCep, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(27, Short.MAX_VALUE))
+                .addContainerGap(22, Short.MAX_VALUE))
         );
 
         btnCadastrar.setBackground(java.awt.Color.white);
@@ -373,11 +367,11 @@ public class Cadastro extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarActionPerformed
-      
+
     }//GEN-LAST:event_btnVoltarActionPerformed
 
     private void btnLogoffActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogoffActionPerformed
-     
+
 // TODO add your hndling code here:
     }//GEN-LAST:event_btnLogoffActionPerformed
 
@@ -386,11 +380,12 @@ public class Cadastro extends javax.swing.JFrame {
     }//GEN-LAST:event_txtBairroActionPerformed
 
     private void btnCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastrarActionPerformed
-    ManterCliente man = new ManterCliente();
-
-    man.CadastrarCliente(1, txtNomeCompleto.getText(), txtEmail.getText(),  txtCpfCnepj.getText(), 
-            Integer.parseInt(txtnumero.getText()), txtCidade.getText(), txtComplemento.getText(), txtCep.getText(), 
-            txtEndereco.getText(), txtBairro.getText());
+        ManterCliente man = new ManterCliente();
+        Random r = new Random();
+        int idCliente = r.nextInt(1000);
+        man.CadastrarCliente(idCliente, txtNomeCompleto.getText(), txtEmail.getText(), txtCpfCnepj.getText(),
+                Integer.parseInt(txtnumero.getText()), txtCidade.getText(), txtComplemento.getText(), txtCep.getText(),
+                txtEndereco.getText(), txtBairro.getText());
     }//GEN-LAST:event_btnCadastrarActionPerformed
 
     /**
@@ -429,16 +424,15 @@ public class Cadastro extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JList<String> ListEstado;
     private javax.swing.JButton btnCadastrar;
     private javax.swing.JButton btnLogoff;
     private javax.swing.JButton btnVoltar;
+    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblBairro;
     private javax.swing.JLabel lblCelular;
     private javax.swing.JLabel lblCep;

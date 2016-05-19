@@ -22,9 +22,9 @@ public Connection Conectar() {
         try {
             Class.forName("oracle.jdbc.driver.OracleDriver");
             System.out.println("Driver JDBC carregado com sucesso!");
-            String url = "jdbc:oracle:thin:@localhost:1521:xe";
+            String url = "jdbc:oracle:thin:@(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=127.0.0.1)(PORT=1521))(CONNECT_DATA=(SID=xe)))";
             try {
-                conn = DriverManager.getConnection(url, "AL254988", "AL254988");
+                conn = DriverManager.getConnection(url, "SANCHES", "SANCHES");
             } catch (SQLException ex) {
                 Logger.getLogger(Conectar.class.getName()).log(Level.SEVERE, null, ex);
             }
