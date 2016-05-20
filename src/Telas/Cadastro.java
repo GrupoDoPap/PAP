@@ -6,6 +6,8 @@
 package Telas;
 
 import DADOS.ManterCliente;
+import java.awt.Dimension;
+import java.awt.Toolkit;
 import java.util.Random;
 
 /**
@@ -13,6 +15,8 @@ import java.util.Random;
  * @author jfnop
  */
 public class Cadastro extends javax.swing.JFrame {
+
+    Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
 
     /**
      * Creates new form Cadastro
@@ -65,7 +69,7 @@ public class Cadastro extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Cadastro");
-        setResizable(false);
+        setPreferredSize(dim);
 
         jPanel1.setBackground(java.awt.Color.white);
         jPanel1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -384,8 +388,9 @@ public class Cadastro extends javax.swing.JFrame {
         Random r = new Random();
         int idCliente = r.nextInt(1000);
         man.CadastrarCliente(idCliente, txtNomeCompleto.getText(), txtEmail.getText(), txtCpfCnepj.getText(),
-                Integer.parseInt(txtnumero.getText()), txtCidade.getText(), txtComplemento.getText(), txtCep.getText(),
-                txtEndereco.getText(), txtBairro.getText());
+                Integer.parseInt(txtnumero.getText()), txtCidade.getText(), txtComplemento.getText(),
+                txtCep.getText(), txtEndereco.getText(), txtBairro.getText());
+
     }//GEN-LAST:event_btnCadastrarActionPerformed
 
     /**

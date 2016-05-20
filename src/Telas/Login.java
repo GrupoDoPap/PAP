@@ -5,7 +5,9 @@
  */
 package Telas;
 
-import RegradeNegocio.MetodoLogin;
+import DADOS.VerificarSenha;
+import RegradeNegocio.Funcionario;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -17,7 +19,7 @@ public class Login extends javax.swing.JFrame {
      * Creates new form Login
      */
     public Login() {
-        
+
         initComponents();
     }
 
@@ -107,9 +109,24 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_txtLoginActionPerformed
 
     private void btnAcessarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAcessarActionPerformed
-        MetodoLogin lo = new MetodoLogin();
-        lo.login(txtLogin.getText(), txtSenha.getText());
-        
+        VerificarSenha ve = new VerificarSenha();
+        Funcionario fu = new Funcionario();
+        Menu me = new Menu();
+        fu.setId_funcionario(Integer.parseInt(txtLogin.getText()));
+        fu.setSenha(txtSenha.getText());
+
+        ve.BuscarSenha(fu.getId_funcionario());
+
+        if (ve.getSenha() != null) {
+            ve.ValidarSenha(fu.getSenha());
+            me.setVisible(true);
+            setVisible(false);
+
+        } else {
+            JOptionPane.showMessageDialog(null, "Usuario ou Senha Invalido");
+
+        }
+
     }//GEN-LAST:event_btnAcessarActionPerformed
 
     /**
@@ -146,7 +163,7 @@ public class Login extends javax.swing.JFrame {
             }
         });
     }
-    
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAcessar;
     private javax.swing.JLabel jLabel1;

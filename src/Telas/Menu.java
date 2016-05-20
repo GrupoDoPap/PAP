@@ -5,17 +5,25 @@
  */
 package Telas;
 
+import java.awt.Dimension;
+import java.awt.Toolkit;
+
 /**
  *
  * @author Sanches
  */
 public class Menu extends javax.swing.JFrame {
-
+ Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
     /**
      * Creates new form menu1
      */
     public Menu() {
+        super("Menu");
+      
         initComponents();
+        // obtém o tamanho da tela
+   
+   
     }
 
     /**
@@ -44,6 +52,7 @@ public class Menu extends javax.swing.JFrame {
         JmniRelatorio = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(getMaximumSize());
 
         jPanel1.setBackground(java.awt.Color.white);
         jPanel1.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
@@ -56,7 +65,7 @@ public class Menu extends javax.swing.JFrame {
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 279, Short.MAX_VALUE)
+            .addGap(0, 258, Short.MAX_VALUE)
         );
 
         jMenuBar1.addFocusListener(new java.awt.event.FocusAdapter() {
@@ -176,7 +185,7 @@ public class Menu extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();

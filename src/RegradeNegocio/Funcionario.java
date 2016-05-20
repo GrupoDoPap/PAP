@@ -1,5 +1,6 @@
 package RegradeNegocio;
 
+import javax.swing.JOptionPane;
 
 /**
  * @version 1.0
@@ -7,26 +8,17 @@ package RegradeNegocio;
  */
 public class Funcionario extends Pessoa {
 
-	private String Cargo;
-	private String Data_Admissao;
-	private int Id_funcionario;
-	private String Setor;
+    private String Senha;
+    private String Cargo;
+    private String Data_Admissao;
+    private int Id_funcionario;
+    private String Setor;
 
-	public Funcionario(){
+    public Funcionario() {
 
-	}
+    }
 
-	public void finalize() throws Throwable {
-		super.finalize();
-	}
-
-	
-	public void Funcionario(String Bairro, String Celular, String Cep, String 
-                Cidade, String CPF, String Data_Nascimento, String Email, String 
-                        Fixo, String Nome, String Ranking_compra, String RG, String Rua, 
-                        String Uf, String Cargo, String Dara_Admissao, int Id_funcionario, String Setor){
-
-	}
+   
 
     public String getCargo() {
         return Cargo;
@@ -60,6 +52,12 @@ public class Funcionario extends Pessoa {
         this.Setor = Setor;
     }
 
-	
+    public String getSenha() {
+        return Senha;
+    }
+
+    public void setSenha(String Senha) {
+        this.Senha = Senha;
+    }
 
 }
