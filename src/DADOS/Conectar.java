@@ -29,11 +29,12 @@ public Connection Conectar() {
                 Logger.getLogger(Conectar.class.getName()).log(Level.SEVERE, null, ex);
             }
             System.out.println("Conexão estabelecida com sucesso!");
+            return conn;
            
         } catch (ClassNotFoundException ex) {
             System.err.println("Classe do driver não encontrada!");
+            return conn;
     }
-      return conn;
 }
 
     public static void main(String[] args) {

@@ -5,6 +5,8 @@
  */
 package DADOS;
 
+import RegradeNegocio.Pessoa;
+import java.util.ArrayList;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -35,6 +37,7 @@ public class TesteTabela extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         txtIdcliente = new javax.swing.JTextField();
         jButton2 = new javax.swing.JButton();
+        jTextField1 = new javax.swing.JTextField();
 
         jToggleButton1.setText("jToggleButton1");
 
@@ -65,10 +68,22 @@ public class TesteTabela extends javax.swing.JFrame {
             }
         });
 
-        jButton2.setText("jButton2");
+        txtIdcliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtIdclienteActionPerformed(evt);
+            }
+        });
+
+        jButton2.setText("Alterar");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
+            }
+        });
+
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
             }
         });
 
@@ -76,43 +91,74 @@ public class TesteTabela extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 796, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(txtIdcliente, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 796, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton1)
-                .addGap(31, 31, 31)
-                .addComponent(jButton2))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(txtIdcliente)
+                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(365, 365, 365))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(343, 343, 343)
+                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 321, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(12, 12, 12)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtIdcliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2))
-                .addGap(42, 42, 42)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(8, 8, 8)
+                        .addComponent(txtIdcliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jButton1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton2)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 54, Short.MAX_VALUE)
+                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(40, 40, 40))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-            ManterCliente m = new ManterCliente();
-            m.ConsultarCliente(Integer.parseInt(txtIdcliente.getText()));
-            DefaultTableModel grid =(DefaultTableModel) tabelaCliente.getModel();
-            grid.addRow(m.consulta.toArray());
-            
+        ManterCliente m = new ManterCliente();
+        DefaultTableModel grid = (DefaultTableModel) tabelaCliente.getModel();
+        grid.addRow(m.consulta.toArray());
+
+        Pessoa p = new Pessoa();
+        Object nome = grid.getValueAt(tabelaCliente.getSelectedRow(), 1);
         
+        Object email = grid.getValueAt(tabelaCliente.getSelectedRow(), 2);
+        Object cpf = grid.getValueAt(tabelaCliente.getSelectedRow(), 3);
+        Object numero = grid.getValueAt(tabelaCliente.getSelectedRow(), 4);
+        Object cidade = grid.getValueAt(tabelaCliente.getSelectedRow(), 5);
+        Object complemento = grid.getValueAt(tabelaCliente.getSelectedRow(), 6);
+        Object cep = grid.getValueAt(tabelaCliente.getSelectedRow(), 7);
+        Object log = grid.getValueAt(tabelaCliente.getSelectedRow(), 8);
+        Object bairro = grid.getValueAt(tabelaCliente.getSelectedRow(), 9);
+
+        m.AtualizarCliente(nome.toString(), email.toString(), cpf.toString(), Integer.parseInt(numero.toString()), cidade.toString(), complemento.toString(), cep.toString(), log.toString(), bairro.toString());
+
+        jTextField1.setText(String.valueOf(nome));
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void txtIdclienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIdclienteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtIdclienteActionPerformed
+
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-         
+
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -153,6 +199,7 @@ public class TesteTabela extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextField jTextField1;
     private javax.swing.JToggleButton jToggleButton1;
     private javax.swing.JTable tabelaCliente;
     private javax.swing.JTextField txtIdcliente;

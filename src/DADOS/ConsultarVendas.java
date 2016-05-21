@@ -41,15 +41,11 @@ public class ConsultarVendas {
           } catch (Exception e) {
             System.out.println("ERRO DE CONEXÃO: " + e);
           }
-          
-        
                System.out.println(consultarVendas.get(0));
                System.out.println(consultarVendas.get(1));
                System.out.println(consultarVendas.get(2));
                System.out.println(consultarVendas.get(3));
-               System.out.println(consultarVendas.get(4));
-               
-           
+               System.out.println(consultarVendas.get(4));         
            
     } 
     public static void main(String[] args) {

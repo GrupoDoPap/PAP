@@ -9,6 +9,7 @@ public class Pessoa {
     private String Bairro;
     private String Celular;
     private String Cep;
+    private int numero;
     private String Cidade;
     private String CPFCNPJ;
     private String Data_Nascimento;
@@ -20,6 +21,30 @@ public class Pessoa {
     private String Rua;
     private String Uf;
     private String Complemento;
+
+    public int getNumero() {
+        return numero;
+    }
+
+    public void setNumero(int numero) {
+        this.numero = numero;
+    }
+
+    public Pessoa(String bairro, String celular, String cep, String cidade, String cpfcnpj, String dtNascimento, String email, String fixo, String nome, String rg, String rua, String uf, String complemento) {
+        this.Bairro = bairro;
+        this.Celular = celular;
+        this.Cep = cep;
+        this.Cidade = cidade;
+        this.CPFCNPJ = cpfcnpj;
+        this.Data_Nascimento = dtNascimento;
+        this.Email = email;
+        this.Fixo = fixo;
+        this.Nome = nome;
+        this.RG = rg;
+        this.Rua = rua;
+        this.Uf = uf;
+        this.Complemento = complemento;
+    }
 
     public String getBairro() {
         return Bairro;
@@ -132,8 +157,6 @@ public class Pessoa {
     public void setComplemento(String Complemento) {
         this.Complemento = Complemento;
     }
-
-    
 
     public Pessoa() {
 

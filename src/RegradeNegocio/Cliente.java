@@ -9,9 +9,21 @@ public class Cliente extends Pessoa {
     private String Data_cadastro;
     private String Data_compra;
     private int Id_manifesto;
-    private int Id_produto;
+    private int Id_Cliente;
     private String Manifesto;
     private String Produto_comprado;
+
+    public Cliente() {
+
+    }
+
+    public int getId_Cliente() {
+        return Id_Cliente;
+    }
+
+    public void setId_Cliente(int Id_Cliente) {
+        this.Id_Cliente = Id_Cliente;
+    }
 
     public String getData_cadastro() {
         return Data_cadastro;
@@ -37,14 +49,6 @@ public class Cliente extends Pessoa {
         this.Id_manifesto = Id_manifesto;
     }
 
-    public int getId_produto() {
-        return Id_produto;
-    }
-
-    public void setId_produto(int Id_produto) {
-        this.Id_produto = Id_produto;
-    }
-
     public String getManifesto() {
         return Manifesto;
     }
@@ -61,9 +65,4 @@ public class Cliente extends Pessoa {
         this.Produto_comprado = Produto_comprado;
     }
 
-    public Cliente() {
-
-    }
-
-   
 }
